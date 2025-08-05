@@ -1,0 +1,210 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+* {
+    box-sizing: border-box;
+    font-family: kanit, sans-serif;
+}
+body {
+    background: #191227;
+}
+.custom-button {
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* tương đương gap-2 */
+    padding: 8px 12px; /* bạn có thể tùy chỉnh */
+    cursor: pointer;
+    font-weight: 700;
+    width: 40%;
+    background: #6366f1;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+}
+.custom-button:hover {
+    background: #6366f1 !important;
+    color: white !important;
+    opacity: 0.7;
+}
+.custom-swap-button {
+    height: 56px;              /* tương đương h-14 */
+    font-size: 1.125rem;       /* tương đương text-lg */
+    font-weight: 700;          /* tương đương font-medium */
+    background-color: #1fc7d4; /* tương đương bg-[#1fc7d4] */
+    color: #191326;
+    border: none;
+    width: 100%;               /* tương đương block (full width) */
+    cursor: pointer;
+    border-radius: 6px;        /* tùy chọn, bạn có thể bo góc */
+    transition: background-color 0.2s ease;
+}
+
+.custom-white-input {
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white !important;
+
+}
+
+.custom-white-input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+/* Chrome, Safari, Edge */
+.custom-white-input::-webkit-outer-spin-button,
+.custom-white-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.custom-white-input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.custom-dark-modal .ant-modal-content {
+    background: linear-gradient(135deg, #1e1b3a 0%, #2d1b4e 100%) !important;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    border-radius: 1rem;
+}
+.custom-dark-modal .ant-modal-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+}
+.custom-dark-modal .ant-modal-title {
+    color: #b8add2 !important;
+}
+.custom-dark-modal .ant-modal-close-x {
+    color: white !important;
+}
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+.hover\:scale-102:hover {
+    transform: scale(1.02);
+}
+
+.button-gradient {
+    background: linear-gradient(to right, #a855f7, #3b82f6); /* from-purple-500 to-blue-500 */
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+}
+
+.button-gradient:hover {
+    background: linear-gradient(to right, #9333ea, #2563eb); /* hover:from-purple-600 to-blue-600 */
+    transform: scale(1.05);
+}
+
+.swap-button {
+    height: 3.5rem; /* h-14 */
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700; /* font-bold */
+    border-radius: 1rem; /* rounded-2xl */
+    border: none;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); /* shadow-lg */
+    background: linear-gradient(to right, #9333ea, #2563eb); /* hover:from-purple-600 to-blue-600 */
+    color: white;
+}
+
+.swap-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #9333ea, #2563eb) !important; /* hover:from-purple-600 to-blue-600 */
+}
+
+/* Khi đang loading */
+.swap-button.loading {
+    animation: pulse 2s infinite;
+}
+
+/* Pulse animation (tailwind's animate-pulse approximation) */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.btn-slippage-active {
+    background-color: #9333ea;
+    border: 1px solid #9333ea;
+}
+
+.btn-slippage-inactive {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    color: #d1d5db;
+}
+.btn-slippage-inactive:hover {
+    background-color: #4b5563 !important;
+}
+
+.btn-purple {
+    background-color: #9333ea;
+    border-color: #9333ea;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    height: 40px;
+}
+
+.btn-purple:hover {
+    background-color: #a855f7 !important;
+    border: 1px solid #a855f7;
+}
+
+.cancel-button {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    color: #d1d5db;
+    order: 2;
+    transition: background-color 0.2s ease;
+    height: 40px
+}
+
+.cancel-button:hover {
+    background-color: #4b5563 !important;
+    border: 1px solid #4b5563 !important;
+    color: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
